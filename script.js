@@ -70,4 +70,3 @@ function executarRemoverBalao() {
         }
     }, 800);
 }
-a;
