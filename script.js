@@ -7,6 +7,7 @@ var totalBalao = 0;
 var pontos = 1;
 var parar = false;
 var chances = 3;
+var balaoSumiu = 0;
 
 function criarBalao() {
     if (parar == false) {
@@ -44,9 +45,9 @@ function perdeu(objeto) {
     pontos++;
     if (pontos == 4) {
         parar = true;
+        window.location.reload();
         alert("Você perdeu");
         erros.innerHTML = "Chances disponíveis: 3";
-        window.location.reload();
     }
 }
 
@@ -64,6 +65,7 @@ function removerBalao() {
     if (parar == false) {
         const elem = document.getElementById(totalBalao++);
         elem.parentNode.removeChild(elem);
+        balaoSumiu++;
     }
 }
 
@@ -71,6 +73,14 @@ function executarRemoverBalao() {
     setInterval(function myloop() {
         for (var i = 0; i < 1; i++) {
             removerBalao();
+            if (balaoSumiu == 10) {
+                parar = true;
+                window.location.reload();
+                alert("Você perdeu");
+                erros.innerHTML = "Chances disponíveis: 3";
+                console.log(balaoSumiu);
+                break;
+            }
         }
     }, 800);
 }
