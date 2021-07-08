@@ -72,14 +72,13 @@ function removerBalao() {
 function executarRemoverBalao() {
     setInterval(function myloop() {
         for (var i = 0; i < 1; i++) {
-            removerBalao();
-            alert("teste");
             if (balaoSumiu == 10) {
                 window.location.reload();
                 alert("Você perdeu");
                 erros.innerHTML = "Chances disponíveis: 3";
                 break;
             }
+            removerBalao();
         }
     }, 800);
 }
