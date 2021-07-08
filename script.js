@@ -66,7 +66,7 @@ function removerBalao() {
         const elem = document.getElementById(totalBalao++);
         elem.parentNode.removeChild(elem);
         balaoSumiu++;
-        console.log(balaoSumiu);
+        console.log("teste2");
     }
 }
 
@@ -74,7 +74,7 @@ function executarRemoverBalao() {
     setInterval(function myloop() {
         for (var i = 0; i < 1; i++) {
             removerBalao();
-            console.log(balaoSumiu);
+            console.log("teste");
             if (balaoSumiu == 10) {
                 window.location.reload();
                 alert("Você perdeu");
