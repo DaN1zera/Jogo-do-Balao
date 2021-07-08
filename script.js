@@ -15,9 +15,12 @@ function criarBalao() {
         balao.setAttribute("id", "" + totalBalaoF);
         var x = Math.floor(Math.random() * 600);
         var y = Math.floor(Math.random() * 400);
-        balao.setAttribute("style", "left:" + x + "px;top:" + y + "px;");
+        balao.setAttribute(
+            "style",
+            "left:" + x + "px;top:" + y + "px; margin-left: 618px;"
+        );
         balao.setAttribute("onclick", "estourar(this)");
-        document.body.appendChild(balao);
+        document.getElementById("divPrincipal").appendChild(balao);
         totalBalaoF++;
     }
 }
