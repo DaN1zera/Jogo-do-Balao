@@ -20,7 +20,7 @@ function criarBalao() {
             "left:" + x + "px;top:" + y + "px; margin-left: 618px;"
         );
         balao.setAttribute("onclick", "estourar(this)");
-        document.getElementById("divPrincipal").appendChild(balao);
+        document.body.appendChild(balao);
         totalBalaoF++;
     }
 }
