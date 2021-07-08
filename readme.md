@@ -2,4 +2,5 @@
 
 ## Regras:
 + Clique no balão para ganhar pontos
-+ Se 5 balões sumirem ou se clicar fora do balão você perde
++ 5 chances disponíveis
++ Se clicar fora do balão ou algum balão sumir perde 1 chance
