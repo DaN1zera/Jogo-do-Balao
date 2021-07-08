@@ -17,7 +17,11 @@ function criarBalao() {
         var y = Math.floor(Math.random() * 400);
         balao.setAttribute(
             "style",
-            "left:" + x + "px;top:" + y + "px; margin-left: 618px;"
+            "left:" +
+                x +
+                "px;top:" +
+                y +
+                "px; position: absolute; margin-left: 618px;"
         );
         balao.setAttribute("onclick", "estourar(this)");
         document.body.appendChild(balao);
