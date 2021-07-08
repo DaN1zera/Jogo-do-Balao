@@ -19,9 +19,17 @@
 <body id="body" onload="">
     <div id="divPrincipal" style="position: relative;display: flex;justify-content: center;">
         <h3 id="total" style="color:#ff0000;position: absolute;margin-left: -333px;">Balões estourados: 0</h3>
-        <h3 id="erros" style="color:#ff0000;position: absolute;margin-left: 333px;">Chances disponíveis: 3</h3>
+        <h3 id="erros" style="color:#ff0000;position: absolute;margin-left: 333px;">Chances disponíveis: 5</h3>
         <div class="background" style="width: 684px;height:466px;margin-top: 40px;position: absolute;border: 1px solid #ff0000;" onclick="perdeu(pontos)"></div>
-        <button class="Começar" onclick="carregarJogo()" style="width: 500px;height: 40px;position: relative;margin-top: 526px;">Clique aqui para começar</button>
+        <button class="Começar" onclick="carregarJogo()" style="width: 100px;height: 40px;position: relative;margin-top: 526px;">Start</button>
+    </div>
+    <div id="regras" style="position: relative;display: flex;justify-content: center;">
+        <h3 style="color: #0000ff;">Regras:</h3>
+        <ul>
+            <li>Clique no balão para ganhar pontos</li>
+            <li>5 chances disponíveis</li>
+            <li>Se clicar fora do balão ou algum balão sumir perde 1 chance</li>
+        </ul>
     </div>
 </body>
 </html>

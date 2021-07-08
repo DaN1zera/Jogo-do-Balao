@@ -6,9 +6,8 @@ let idBalao = 0;
 let idBalaoRemover = 0;
 let pontos = 1;
 let parar = false;
-let chances = 3;
-let balaoSumiu = 0;
-let atiletPerdeu = false;
+let chances = 5;
+let ativarPerdeu = false;
 
 function criarBalao() {
     if (parar == false) {
@@ -30,7 +29,8 @@ function criarBalao() {
         setTimeout(function () {
             const excluirBalao = document.getElementById(idBalaoRemover++);
             excluirBalao.parentNode.removeChild(excluirBalao);
-            balaoSumiu++;
+            chances--;
+            erros.innerHTML = "Chances disponíveis: " + chances;
         }, 1550);
         idBalao++;
     }
@@ -44,18 +44,18 @@ function estourar(objeto) {
 }
 
 function perdeu() {
-    if (atiletPerdeu == true) {
+    if (ativarPerdeu == true) {
         chances--;
         let erros = document.getElementById("erros");
         erros.innerHTML = "Chances disponíveis: " + chances;
         pontos++;
-        if (pontos == 4) {
+        if (pontos == 5) {
             parar = true;
             window.location.reload();
             alert("Você perdeu");
             erros.innerHTML = "Chances disponíveis: 3";
         }
-    } else if (atiletPerdeu == false) {
+    } else if (ativarPerdeu == false) {
         return false;
     }
 }
@@ -63,7 +63,7 @@ function perdeu() {
 function removerBalao() {
     setInterval(function loopDerrota() {
         for (let i = 0; i < 1; i++) {
-            if (balaoSumiu == 10) {
+            if (chances == 0) {
                 window.location.reload();
                 alert("Você perdeu");
                 break;
@@ -75,10 +75,10 @@ function removerBalao() {
 function carregarJogo() {
     parar = false;
     pontos = 1;
-    chances = 3;
+    chances = 5;
     totalBalao = 0;
     total = 0;
-    atiletPerdeu = true;
+    ativarPerdeu = true;
     setInterval(criarBalao, 400);
     removerBalao();
 }

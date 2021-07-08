@@ -1,6 +1,5 @@
 # Jogo do balão
-+ Se 10 balões sumirem você perde
 
 ## Regras:
 + Clique no balão para ganhar pontos
-+ 3 erros disponíveis
++ Se 5 balões sumirem ou se clicar fora do balão você perde
