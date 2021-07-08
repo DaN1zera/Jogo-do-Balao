@@ -74,11 +74,9 @@ function executarRemoverBalao() {
         for (var i = 0; i < 1; i++) {
             removerBalao();
             if (balaoSumiu == 10) {
-                parar = true;
                 window.location.reload();
                 alert("Você perdeu");
                 erros.innerHTML = "Chances disponíveis: 3";
-                console.log(balaoSumiu);
                 break;
             }
         }
