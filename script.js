@@ -52,7 +52,7 @@ function perdeu() {
         if (pontos == 5) {
             parar = true;
             window.location.reload();
-            alert("Você perdeu");
+            alert("Que pena, você perdeu :(  Balões estourados: " + total);
             erros.innerHTML = "Chances disponíveis: 3";
         }
     } else if (ativarPerdeu == false) {
@@ -65,7 +65,7 @@ function removerBalao() {
         for (let i = 0; i < 1; i++) {
             if (chances == 0) {
                 window.location.reload();
-                alert("Você perdeu");
+                alert("Que pena, você perdeu :(  Balões estourados: " + total);
                 break;
             }
         }
