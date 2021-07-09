@@ -31,7 +31,7 @@ function criarBalao() {
             const excluirBalao = document.getElementById(idBalaoRemover++);
             excluirBalao.parentNode.removeChild(excluirBalao);
             chances--;
-            erros.innerHTML = "Chances disponíveis: " + chances;
+            erros.innerHTML = `Chances disponíveis: ${chances}`;
         }, 1550);
         idBalao++;
     }
@@ -41,19 +41,19 @@ function estourar(objeto) {
     document.body.removeChild(objeto);
     total++;
     let score = document.getElementById("total");
-    score.innerHTML = "Balões estourados: " + total;
+    score.innerHTML = `Balões estourados: ${total}`;
 }
 
 function perdeu() {
     if (ativarPerdeu == true) {
         chances--;
         let erros = document.getElementById("erros");
-        erros.innerHTML = "Chances disponíveis: " + chances;
+        erros.innerHTML = `Chances disponíveis: ${chances}`;
         pontos++;
         if (pontos == 5) {
             parar = true;
             window.location.reload();
-            alert("Que pena, você perdeu :(  Balões estourados: " + total);
+            alert(`Que pena, você perdeu :(  Balões estourados: ${total}`);
             erros.innerHTML = "Chances disponíveis: 3";
         }
     } else if (ativarPerdeu == false) {
@@ -66,7 +66,7 @@ function removerBalao() {
         for (let i = 0; i < 1; i++) {
             if (chances == 0) {
                 window.location.reload();
-                alert("Que pena, você perdeu :(  Balões estourados: " + total);
+                alert(`Que pena, você perdeu :(  Balões estourados: ${total}`);
                 break;
             }
         }
