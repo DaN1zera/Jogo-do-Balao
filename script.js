@@ -8,6 +8,7 @@ let pontos = 1;
 let parar = false;
 let chances = 5;
 let ativarPerdeu = false;
+let clicarStart = false;
 
 function criarBalao() {
     if (parar == false) {
@@ -73,12 +74,17 @@ function removerBalao() {
 }
 
 function carregarJogo() {
-    parar = false;
-    pontos = 1;
-    chances = 5;
-    totalBalao = 0;
-    total = 0;
-    ativarPerdeu = true;
-    setInterval(criarBalao, 400);
-    removerBalao();
+    if (clicarStart == false) {
+        parar = false;
+        pontos = 1;
+        chances = 5;
+        totalBalao = 0;
+        total = 0;
+        ativarPerdeu = true;
+        clicarStart = true;
+        setInterval(criarBalao, 400);
+        removerBalao();
+    } else {
+        return;
+    }
 }
