@@ -1,5 +1,7 @@
 # Jogo do balão
 
+https://dann-bnd.github.io/Jogo-do-Balao/
+
 ## Regras:
 + Clique no balão para ganhar pontos
 + 5 chances disponíveis
