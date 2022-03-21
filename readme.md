@@ -1,6 +1,6 @@
 # Jogo do balão
 
-https://dann-bnd.github.io/Jogo-do-Balao/
+https://daniel-bnd.github.io/Jogo-do-Balao/
 
 ## Regras:
 + Clique no balão para ganhar pontos
